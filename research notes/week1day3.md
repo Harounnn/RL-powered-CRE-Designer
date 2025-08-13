@@ -1,6 +1,7 @@
 ## Understanding the reward function for CRE design agent
 
 ### Key Formula
+
 $$
 \text{reward}(seq) = \alpha \cdot \text{predictor\_score}(seq) 
 + \beta \cdot \text{best\_PWM\_score}(seq, motif) 
