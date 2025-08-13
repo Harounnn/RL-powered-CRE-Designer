@@ -3,11 +3,12 @@
 ### Key Formula
 
 $$
-\text{reward}(seq) =
-\alpha \cdot \text{predictor\_score}(seq) +
-\beta \cdot \text{best\_PWM\_score}(seq, motif) +
-\gamma \cdot \text{gc\_penalty}(seq) +
-\delta \cdot \text{homopolymer\_penalty}(seq)
+\begin{aligned}
+\text{reward}(seq) &= \alpha \cdot \text{predictor\_score}(seq) \\
+&+ \beta \cdot \text{best\_PWM\_score}(seq, motif) \\
+&+ \gamma \cdot \text{gc\_penalty}(seq) \\
+&+ \delta \cdot \text{homopolymer\_penalty}(seq)
+\end{aligned}
 $$
 
 
