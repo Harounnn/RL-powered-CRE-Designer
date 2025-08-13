@@ -2,14 +2,10 @@
 
 ### Key Formula
 
-$$
-\begin{aligned}
-\text{reward}(seq) &= \alpha \cdot \text{predictor\_score}(seq) \\
-&+ \beta \cdot \text{best\_PWM\_score}(seq, motif) \\
-&+ \gamma \cdot \text{gc\_penalty}(seq) \\
-&+ \delta \cdot \text{homopolymer\_penalty}(seq)
-\end{aligned}
-$$
+reward(seq) = α × predictor_score(seq)
+            + β × best_PWM_score(seq, motif)
+            + γ × gc_penalty(seq)
+            + δ × homopolymer_penalty(seq)
 
 
 ---
