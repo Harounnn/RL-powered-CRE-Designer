@@ -1,12 +1,12 @@
 ## Understanding the reward function for CRE design agent
 
 ### Key Formula
-$$
-\text{reward}(seq) = \alpha \cdot \text{predictor\_score}(seq) 
-+ \beta \cdot \text{best\_PWM\_score}(seq, motif) 
-- \gamma \cdot \text{gc\_penalty}(seq) 
-- \delta \cdot \text{homopolymer\_penalty}(seq)
-$$
+
+reward(seq) = α × predictor_score(seq)
+            + β × best_PWM_score(seq, motif)
+            + γ × gc_penalty(seq)
+            + δ × homopolymer_penalty(seq)
+
 
 ---
 
