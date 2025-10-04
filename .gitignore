@@ -1,0 +1,3 @@
+data/raw/sharpr/*.txt
+data/processed/sharpr/processed_sharpr_sequence_activity.csv
+venv/
