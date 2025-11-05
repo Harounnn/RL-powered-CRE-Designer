@@ -1,5 +1,9 @@
 data/raw/sharpr/*.txt
 data/processed/sharpr/processed_sharpr_sequence_activity.csv
 venv/
+<<<<<<< HEAD
 models/
 data/processed/sharpr/*.npz
+=======
+models/
+>>>>>>> 0fb10ed90cc8d329b03d3045e844eeea26c2941f
