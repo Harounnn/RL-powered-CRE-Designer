@@ -1,0 +1,12 @@
+{
+  "device": "cpu",
+  "seq_len": 145,
+  "n_samples": 226538,
+  "batch_size": 128,
+  "epochs_ran": 21,
+  "best_epoch": 15,
+  "best_val_spearman": 0.2811895373170899,
+  "test_spearman_at_best": 0.2648276986145606,
+  "total_time_sec": 4903.100923061371,
+  "pilot": 0
+}

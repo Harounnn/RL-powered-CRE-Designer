@@ -1,0 +1,15 @@
+=== C2 SVD + LightGBM Results ===
+desc: SVD-200
+best_iter: 1996
+mae: 0.8293663098911291
+spearman: 0.31290827138912225
+elapsed_sec: 386.32279109954834
+model: models\predictor_sharpr_lgbm_svd200.txt
+
+desc: SVD-500
+best_iter: 1777
+mae: 0.8247466497781125
+spearman: 0.3196399283582913
+elapsed_sec: 1017.9277424812317
+model: models\predictor_sharpr_lgbm_svd500.txt
+

@@ -1,0 +1,15 @@
+C1 k7 and hybrid report
+
+k7 result:
+model_path: models\predictor_sharpr_lgbm_k7.txt
+best_iter: 1431
+mae: 0.8169042932390733
+spearman: 0.3325543388013783
+elapsed_sec: 585.2946507930756
+
+k6+k7 hybrid result:
+model_path: models\predictor_sharpr_lgbm_k6k7.txt
+best_iter: 1010
+mae: 0.8133066659948601
+spearman: 0.3338857819659881
+elapsed_sec: 555.2076370716095
