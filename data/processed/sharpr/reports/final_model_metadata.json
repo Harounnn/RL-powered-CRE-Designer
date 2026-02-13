@@ -1,0 +1,26 @@
+{
+  "project": "Agent-Based CRE Designer (CellType-Aware Promoter Agent)",
+  "model_name": "predictor_sharpr_lightgbm",
+  "model_file": "models/predictor_sharpr_lightgbm.txt",
+  "vocab_file": "data/processed/sharpr/vocab_k6.json",
+  "feature_matrix": "data/processed/sharpr/X_k6.npz",
+  "y_file": "data/processed/sharpr/y.npy",
+  "model_type": "lightgbm",
+  "best_params": {
+    "learning_rate": 0.01,
+    "num_leaves": 255,
+    "min_data_in_leaf": 100,
+    "feature_fraction": 0.8,
+    "lambda_l1": 0.0,
+    "lambda_l2": 0.0,
+    "objective": "regression",
+    "metric": "l1"
+  },
+  "best_iteration": null,
+  "training_seed": 42,
+  "coverage_filter": 10,
+  "n_sequences_after_filter": 226538,
+  "notes": "Selected surrogate: LightGBM on raw overlapping 6-mer counts. TF-IDF, SVD and CNN prototype did not produce better Spearman on our setup. Consider retraining with coverage>=20 in future experiments.",
+  "date_saved": "2026-02-11",
+  "author": "Med Haroun Zamouri (repo user)"
+}
