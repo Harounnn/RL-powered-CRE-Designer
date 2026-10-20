@@ -2,8 +2,6 @@
 
 ## Research framing
 
-After rereading the README, I reaffirmed that the project is an RL-powered **generative** CRE/promoter designer. Generation is the primary task; modifying a supplied sequence can be a secondary capability. The earlier Week 4 single-base-edit environment was a useful prototype option, but it does not represent the main research objective.
-
 The revised research question is:
 
 > Can reinforcement learning adapt a discrete-diffusion generator to produce CRE sequences that better meet an activity objective while preserving sequence quality and diversity learned from SHARPR data?
