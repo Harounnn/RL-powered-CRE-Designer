@@ -3,5 +3,6 @@ data/processed/sharpr/processed_sharpr_sequence_activity.csv
 venv/
 models/
 data/processed/sharpr/*.npz
+data/processed/sharpr/diffusion_splits/
 AGENTS.md
 PROJECT_STATUS.md

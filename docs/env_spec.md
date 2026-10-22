@@ -10,15 +10,15 @@ The central experiment is whether RL increases objective reward over the unoptim
 
 ## 2. Available data and initial scope
 
-- Primary training material: processed SHARPR sequences, with 226,538 rows recorded after the DNA coverage â‰¥10 filter.
+- Primary training material: processed SHARPR sequences, with 226,538 rows after filtering on total read coverage (`rna_total + dna_total >= 10`). The filter was confirmed in `experiments/make_k6_and_baseline.py`; it is not a DNA-only threshold.
 - The inspected processed examples are 145 bases long. The primary environment therefore fixes sequence length at 145; reject other lengths unless a separately documented task changes this contract.
 - Sequence alphabet: `A`, `C`, `G`, `T`. Ambiguous symbols are rejected by the environment.
 - The current repository has one activity-label/predictor path. The first objective is therefore conditioned on the available assay. The interface may carry an assay/target identifier, but cell-type-specific or target-versus-off-target claims require multi-context data and predictors that are not currently present.
-- Establish explicit unique-sequence train/validation/test partitions before training the generative model. Do not use validation or test sequences in RL optimization. Keep duplicate sequences in one partition.
+- Establish explicit unique-sequence train/validation/test partitions before training the generative model. Day 2 uses 80/10/10 with seed 42. Do not use validation or test sequences in generator training or RL optimization. Keep duplicate sequences in one partition.
 
 ## 3. Generative model and MDP
 
-Use a categorical discrete-diffusion model over fixed-length nucleotide sequences. A forward corruption process progressively substitutes nucleotides until the terminal noisy sequence is near-uniform. The learned reverse process maps a noisy sequence toward a data-like sequence. A D3-style nucleotide substitution process is the first literature-informed candidate; the exact kernel, schedule, denoising step count, and architecture remain configurable pending Day 2 pilots.
+Use a categorical discrete-diffusion model over fixed-length nucleotide sequences. A forward corruption process progressively substitutes nucleotides until the terminal noisy sequence is uniform. The learned reverse process maps a noisy sequence toward a data-like sequence. The Day 2 mechanics pilot uses a D3-inspired uniform-substitution kernel with linear cumulative retention, `alpha_bar(t) = 1 - t/T`, and `T=32`; this is a configurable mechanics setting, not a final training horizon or model choice. Architecture and training settings remain for the Day 3 pilot.
 
 ### State / observation
 
